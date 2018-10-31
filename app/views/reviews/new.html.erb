@@ -1,0 +1,12 @@
+<% @review = Review.new %>
+
+
+<%= simple_form_for [@restaurant, @review] do |r| %>
+<%= form_for @review do |review| %>
+  <%= review.label :content, "Content" %>
+  <%= review.text_field :content %>
+  <%= review.label :rating, "Rating" %>
+  <%= review.text_field :rating %>
+  <%= review.submit %>
+  <% end %>
+<% end %>
