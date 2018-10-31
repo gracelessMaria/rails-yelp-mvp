@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(reviews_params)
-    @review.restaurant = Restaurant.find(params[:id])
+    @review.restaurant = Restaurant.find(params[:restaurant_id])
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
